@@ -1,0 +1,127 @@
+
+/* Navbar */
+#main-nav .social {
+  display: none;
+}
+
+#main-nav .nav-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/* Header */
+#main-header {
+  padding: 1rem;
+}
+
+#main-header .header-container .content {
+  width: 30vh;
+}
+
+#main-header .header-container .content h1 {
+  font-size: 1.2rem;
+}
+
+/* Main */
+#main .section-1 .wrap-container .main-container {
+  grid-template-columns: 1fr;
+}
+
+#main .section-1 .wrap-container .main-container > *:first-child {
+  grid-template-columns: 1fr;
+  grid-column: auto;
+}
+
+#main .section-1 .wrap-container .main-container > *:last-child {
+  grid-template-columns: 1fr;
+  grid-column: auto;
+}
+
+/* Footer */
+#main-footer {
+  padding-bottom: 2rem;
+}
+#main-footer .footer-container {
+  display: block;
+}
+
+
+#main-footer .wrap-container button {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  margin-bottom: 0rem;
+  font-size: 0.75rem;
+}
+
+/* About */
+
+section .about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-gap: 1rem; */
+}
+
+section .about-container .about1 h1 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+section .about-container .about1 {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+section .about-container .about2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+
+
+/* Article */
+section .article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section .article-container .article1 h1 {
+  font-size: 1.5rem;
+}
+
+section .article-container .article1 {
+  margin-bottom: 1rem;
+}
+
+section .article-container .article2 {
+  margin-top: 0rem;
+}
+
+
+section .article-container .article2 ul li {
+  font-size: 1rem;
+}
+
+section .article-container .article1 > div {
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+section .article-container .article1 .ent {
+  font-size: 0.4rem;
+  padding: 0.2rem;
+  border-radius: 50px;
+}
+
+section .article-container .article3 {
+  margin-bottom: 2rem;
+}
+

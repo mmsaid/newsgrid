@@ -1,0 +1,574 @@
+
+/* Rest */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+}
+
+.wrap-container {
+  width: 80%;
+  margin: auto;
+}
+
+#main-nav .nav-container {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+}
+
+#main-nav .wrap-container .logo {
+  width: 180px;
+  padding: 1rem;
+}
+
+#main-nav .wrap-container a {
+  text-decoration: none;
+  color: #555;
+}
+
+#main-nav .wrap-container ul {
+  list-style: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#main-nav .wrap-container ul li {
+  padding: 0.2rem;
+}
+
+#main-nav .wrap-container ul li a {
+  padding: 0.75rem;
+  color: #000;
+}
+
+#main-nav .wrap-container ul li a.current {
+  background: darkred;
+  color: #fff;
+}
+
+#main-nav .wrap-container ul li a:hover {
+  background: #ccc;
+  color: #000;
+}
+
+#main-nav .social {
+  padding: 1rem;
+}
+
+#main-nav .social a {
+  margin-right: 0.7rem;
+}
+
+/* Header */
+#main-header {
+  background: #333;
+  position: relative;
+  z-index: 0;
+  padding: 5rem;
+  /* we do not specifay any height here to make the content inside the pic stay within the pic and do not flew out, that is if I want the pic wrap around its text only not the whole header container.. */
+}
+
+#main-header:before {
+  content: '';
+  background: url(https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?cs=srgb&dl=action-athletes-ball-1618269.jpg&fm=jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* here I will make the class content is the grid item */
+#main-header .header-container {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-header .header-container .content h1 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#main-header .header-container .content p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.4;
+}
+
+#main-header .header-container a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  background: darkred;
+}
+
+#main-header .header-container a:hover {
+  opacity: 0.8;
+}
+
+/* (*) means the direct element(I do not have to specifay the element's name) after the class content, which is (class small) */
+#main-header .header-container .content > *:first-child {
+  margin-bottom: 0.2rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  background: orange;
+  padding: 0.5rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
+
+/* Main */
+
+#main {
+  background: lightgray;
+  padding-bottom: 2rem;
+}
+
+#main .section-1 .wrap-container h2 {
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#main .section-1 .wrap-container .main-container .main-img {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* to create a background color around each article */
+#main .section-1 .wrap-container .main-container .card {
+  background: #fff;
+  padding: 1rem;
+}
+
+#main .section-1 .wrap-container .main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+/* here to make the first article display as a grid and then split it to 2 columns. */
+#main .section-1 .wrap-container .main-container > *:first-child {
+  display: grid;
+  /* here to give the img and its content the same size and split them to 2 columns. */
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1 / span 2;
+}
+
+#main .section-1 .wrap-container .main-container .content-1 {
+  text-align: justify;
+  padding: 1rem;
+  margin: auto;
+}
+
+/* here to make the first article display as a grid and then split it to 2 columns. */
+#main .section-1 .wrap-container .main-container > *:last-child {
+  display: grid;
+  /* here to give the img and its content the same size and split them to 2 columns. */
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 2 / span 2;
+}
+
+#main .section-1 .wrap-container .main-container > *:last-child .content-2 {
+  text-align: justify;
+  padding: 1rem;
+  margin: auto;
+}
+
+#main .section-1 .wrap-container .main-container a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#main .section-1 .wrap-container .main-container h3 {
+  padding-bottom: 1rem; 
+}
+
+#main .section-1 .wrap-container .main-container p {
+  line-height: 1.6; 
+}
+
+#main .section-1 .wrap-container .main-container .sport1 {
+  background: #333;
+  color: #fff;
+}
+
+#main .section-1 .wrap-container .main-container .sport1 h3 a {
+  color: #fff;
+}
+
+#main .section-1 .wrap-container .main-container .sport2 {
+  background: darkred;
+  color: #fff;
+}
+
+#main .section-1 .wrap-container .main-container .sport2 h3 a {
+  color: #fff;
+}
+
+
+#main .section-1 .wrap-container .main-container .heading-ent {
+  background: blueviolet;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
+}
+
+#main .section-1 .wrap-container .main-container .heading-spo {
+  background: orange;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
+}
+
+#main .section-1 .wrap-container .main-container .heading-tech {
+  background: lightseagreen;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+
+/* Footer */
+#main-footer {
+  background: #333;
+  color: #fff;
+  padding-top: 2rem;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+#main-footer .wrap-container .logo {
+  width: 150px;
+}
+
+#main-footer .wrap-container p {
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+#main-footer .wrap-container h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 80%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn1 {
+  background: darkred;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+.btn1:hover {
+  opacity: 0.8;
+}
+
+#main-footer .wrap-container ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+#main-footer .wrap-container ul li {
+  padding: 1rem;
+  border-bottom: 1px #aaa dotted;
+}
+
+#main-footer .wrap-container ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#main-footer .wrap-container ul li a:hover {
+  color: red;
+}
+
+#main-footer .wrap-container h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#main-footer .wrap-container button {
+  display: block;
+  background: orange;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#main-footer .wrap-container button:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  grid-column: 1 / span 4;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border: 1px #444 solid;
+  background: #444;
+  margin-bottom: 2rem;
+}
+
+/* About */
+
+section {
+  background: lightgray;
+}
+
+section .about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+}
+
+section .about-container .about1 {
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem 0;
+  /* to make the .about2 shrinks and takes only its content's size */
+  /* 3 here to span the about1 to 3 rows down and also to allow us to have 3 side bars(3rows) next to about1 ONLY on the right side including the green(about2) side bar, and I coude have extra side bars next to the about1 by increasing the row span more than 3, and also if we have extra rows will be placed under the about1 and about2. NOTE: if we have less or more than 3 rows next to about1 then each row will cover its content ONLY. BUT if we have the 3 rows exactly then they will resize themselves equally to fit the about1's width and height..So here we will have 1 column next to about1 with equal size 3 rows for each row, because we declared that as well in the grid container(grid-template-columns: repeat(2, 1fr))...*/
+  grid-row: 1 / span 3;
+}
+
+section .about-container .about1 h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+section .about-container .about1 p {
+  font-size: 1.2rem;
+}
+
+section .about-container .about2{
+  background: darkred;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+section .about-container .about2 h1 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+section .about-container .about2 p {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-bottom: 1rem;
+}
+
+section .about-container .about2 a {
+  display: block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+section .about-container .about2 a:hover {
+  opacity: 0.9;
+}
+
+/* Article */
+section .wrap-container .article-img {
+  width: 100%;
+}
+
+section {
+  background: lightgray;
+}
+
+section .article-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+}
+
+section .article-container .article1{
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem 0;
+  /* to make the .article2 shrinks and takes only its content's size */
+  /* 3 here to span the article1 to 3 rows down and also to allow us to have 3 side bars(3rows) next to article1 ONLY on the right side including the green(article2) side bar, and I coude have extra side bars next to the article1 by increasing the row span more than 3, and also if we have extra rows will be placed under the article1 and article2. NOTE: if we have less or more than 3 rows next to article1 then each row will cover its content ONLY. BUT if we have the 3 rows exactly then they will resize themselves equally to fit the article1's width and height..So here we will have 1 column next to article1 with equal size 3 rows for each row, because we declared that as well in the grid container(grid-template-columns: repeat(2, 1fr))...*/
+  grid-row: 1 / span 3;
+}
+
+section .article-container .article1 h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+section .article-container .article1 p {
+  font-size: 1.2rem;
+}
+
+section .article-container .article2 {
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+section .article-container .article2 h1 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+section .article-container .article2 ul {
+  list-style: none;
+}
+
+section .article-container .article2 ul li {
+  font-size: 1.2rem;
+  border-bottom: 1px #ccc dotted;
+  padding: 0.5rem;
+}
+
+section .article-container .article2 a {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+section .article-container .article2 a:hover {
+  color: red;
+}
+
+section .article-container .article3 {
+  background: orange;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+section .article-container .article3 h1 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+section .article-container .article3 p {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-bottom: 1rem;
+}
+
+section .article-container .article3 a {
+  display: block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+section .article-container .article3 a:hover {
+  opacity: 0.9;
+}
+
+section .article-container .article1 > div {
+  font-size: 0.8rem;
+  background: lightgray;
+  border: 1px lightgray solid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+section .article-container .article1 .ent {
+  background: blueviolet;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+
+section .article-container .article1 .small-grid {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
